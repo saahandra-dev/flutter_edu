@@ -60,11 +60,11 @@ class _ClockState extends State<Clock> {
           ),
         ),
         Positioned(
-          top: 50,
+          top: 25,
           left: 0,
           right: 0,
           child: Consumer<MyThemeModel>(
-            builder: (context, theme, child) => InkWell(
+            builder: (context, theme, child) => GestureDetector(
               onTap: () => theme.changeTheme(),
               child: SvgPicture.asset(
                 theme.isLightTheme
