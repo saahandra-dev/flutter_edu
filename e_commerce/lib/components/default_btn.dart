@@ -8,7 +8,7 @@ class DefaultBtn extends StatelessWidget {
     Key? key, required this.text, required this.press,
   }) : super(key: key);
   final String text;
-  final Function press;
+  final void Function()? press;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class DefaultBtn extends StatelessWidget {
       width: double.infinity,
       height: getProportionateScreenHeight(56),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: press,
         style: ElevatedButton.styleFrom(
           primary: kPrimaryColor,
           shape: RoundedRectangleBorder(
